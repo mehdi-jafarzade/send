@@ -31,7 +31,7 @@ export default function Home() {
 
   
   const fetchData = async (): Promise<void> => {
-    const Apiur = process.env.API_URL || "https://stordb.liara.run"
+    const Apiur = process.env.API_URL || "http://localhost:3000"
     try {
       const response = await fetch(`${Apiur}/api/imageget` , {cache: "no-store"});
       if (response.ok) {
