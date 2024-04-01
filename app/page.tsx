@@ -31,8 +31,9 @@ export default function Home() {
 
   
   const fetchData = async (): Promise<void> => {
-    const Apiur = process.env.API_URL || "http://localhost:3000"
-
+    const Apiur = process.env.NEXT_PUBLIC_API_URL
+    console.log(Apiur);
+    
     try {
       const response = await fetch(`${Apiur}/api/imageget` , {cache: "no-store"});
       if (response.ok) {
@@ -50,6 +51,10 @@ export default function Home() {
     }
   }
 
+  
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <main>
