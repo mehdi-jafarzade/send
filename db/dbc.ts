@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export async function Connect() {
-  const mongoURI = process.env.MONGODBURI;
+  const mongoURI = process.env.NEXT_PUBLIC_MONGODBURI;
   
   if (!mongoURI) {
     throw new Error("MONGOURI environment variable is not defined.");
