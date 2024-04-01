@@ -31,6 +31,7 @@ export default function Home() {
 
   
   const fetchData = async (): Promise<void> => {
+    
     const Apiur = process.env.NEXT_PUBLIC_API_URL
     console.log(Apiur);
     
